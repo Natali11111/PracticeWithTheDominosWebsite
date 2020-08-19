@@ -39,7 +39,6 @@ public class BasePage extends PageObject {
 
     public BasePage clickPizzaButton() {
         pizzaButton.click();
-        sleep(3000);
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[text()='Пицца: Классические']")));
             return new PizzaPage();
@@ -93,18 +92,9 @@ public class BasePage extends PageObject {
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='dp-modal-confirm-location__content']")));
             yesButton.click();
-            sleep(3000);
             return true;
         } catch (TimeoutException e) {
             return false;
-        }
-    }
-
-    public static void sleep(long milis) {
-        try {
-            Thread.sleep(milis);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
     }
 }

@@ -29,7 +29,6 @@ public class CheckoutTest extends BaseTest {
         checkoutPage.fillingOutAnOrder(checkout);
         basePage = checkoutPage.clickOrderButton();
         Assert.assertTrue(basePage instanceof DeliveryPage);
-        DeliveryPage deliveryPage = (DeliveryPage) basePage;
     }
 
     @Test(dataProvider = "checkoutProvider")
@@ -47,8 +46,6 @@ public class CheckoutTest extends BaseTest {
         checkoutPage.fillingOutAnOrder(checkout);
         basePage = checkoutPage.clickOrderButton();
         Assert.assertTrue(basePage instanceof DeliveryPage);
-        DeliveryPage deliveryPage = (DeliveryPage) basePage;
-
     }
 
     @Test(dataProvider = "checkoutProvider")
@@ -80,8 +77,6 @@ public class CheckoutTest extends BaseTest {
         checkoutPage.fillingOutAnOrder(checkout);
         basePage = checkoutPage.clickOrderButton();
         Assert.assertTrue(basePage instanceof DeliveryPage);
-        DeliveryPage deliveryPage = (DeliveryPage) basePage;
-
     }
 
     @DataProvider

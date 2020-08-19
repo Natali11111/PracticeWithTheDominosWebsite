@@ -97,10 +97,6 @@ public class CheckoutPage extends BasePage {
 
 
     private void clickOnTheDropDownListWithTypePayment() {
-//        WebElement element = driver.findElement(By.xpath("//div[@class=' css-tlfecz-indicatorContainer']"));
-//        JavascriptExecutor executor = (JavascriptExecutor) driver;
-//        executor.executeScript("arguments[0].click();", element);
-        List<WebElement> listOfAllDropdownButtons = wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//div[@class=' css-tlfecz-indicatorContainer']"), 3));
         WebElement element = listOfDropDownButtons.get(3);
         element.click();
     }
